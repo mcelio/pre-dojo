@@ -85,7 +85,7 @@ Requisitos para execução da aplicação
 	 
 - Executar
 	
-	
+	<aplicação> java -jar target/amil-test-0.0.1-SNAPSHOT.jar
 
 	
 OBSERVAÇÕES

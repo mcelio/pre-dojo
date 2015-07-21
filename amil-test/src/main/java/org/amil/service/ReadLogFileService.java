@@ -1,6 +1,7 @@
 package org.amil.service;
 
-import java.io.InputStream;
+import java.io.File;
+import java.net.URL;
 import java.text.ParseException;
 import java.util.Scanner;
 
@@ -38,10 +39,9 @@ public class ReadLogFileService implements State {
 	@Autowired
 	private PlayState playState;
 
-	private InputStream readFile() throws Exception {
+	private File readFile() throws Exception {
 		ClassLoader classLoader = getClass().getClassLoader();
-		//Object file = classLoader.getResource("input/log.log").getFile();
-		return classLoader.getResourceAsStream("input/log.log");
+		return new File("input" + File.separator + "log.log");
 	}
 
 	public void parseFile() {
@@ -54,7 +54,7 @@ public class ReadLogFileService implements State {
 			Match match = null;
 			while (scanner.hasNextLine()) {
 				String line = scanner.nextLine();
-				if (line != null && !line.trim().equals("")) {
+				if (line != null && !line.trim().equals("")) {					
 					if (line.indexOf("New match") != -1) {
 						setState(matchStartedState);
 					} else if (line.indexOf("ended") != -1) {
