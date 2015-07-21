@@ -1,9 +1,6 @@
 package org.amil.service;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
-import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.util.Scanner;
 
@@ -43,7 +40,7 @@ public class ReadLogFileService implements State {
 
 	private InputStream readFile() throws Exception {
 		ClassLoader classLoader = getClass().getClassLoader();
-		//return new File(classLoader.getResource("input/log.log").getFile());
+		//Object file = classLoader.getResource("input/log.log").getFile();
 		return classLoader.getResourceAsStream("input/log.log");
 	}
 
