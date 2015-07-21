@@ -42,7 +42,7 @@ Algumas premissas e restrições devem ser consideradas para o programa desenvolvi
 
 - O local de leitura do arquivo deverá ser 
 
-<aplicação>/src/main/resources/input 
+<aplicação>/input 
 
 - Não foram implementadas validaçõa de codificações de arquivo (UTF-8, ISO8856, etc)
 
@@ -77,7 +77,7 @@ Requisitos para execução da aplicação
 - Arquivo de log 
 	- Colocar arquivo de log com noem de "log.log" no caminho
 	
-		<aplicação>/src/main/resources/input
+		<aplicação>/input
 		
 - Compilar 
 
